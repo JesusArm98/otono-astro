@@ -1,34 +1,55 @@
-
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<!-- Pre-cargar la fuente -->
-	<link id="google-font" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500&display=swap" rel="stylesheet" media="print">
-	<script type="module">
-		document.addEventListener('DOMContentLoaded', () => {
-			const fontLink = document.getElementById('google-font');
-			if (fontLink) {
-				fontLink.setAttribute('media', 'all');
-			}
-		});
-	</script>
-		<meta name="Casa Otoño" content="Bienvenidos a nuestra acogedora y dedicada residencia para adultos mayores. Ofrecemos un servicio integral y profesional, creando un modelo de atención que fomenta la convivencia en un ambiente familiar, ameno y seguro." />
-		<title>Casa Otoño</title>
-	</head>
-	<body class="relative">
-		
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Pre-cargar la fuente -->
+    <link
+      id="google-font"
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500&display=swap"
+      rel="stylesheet"
+      media="print"
+    />
+    <script type="module">
+      document.addEventListener("DOMContentLoaded", () => {
+        const fontLink = document.getElementById("google-font");
+        if (fontLink) {
+          fontLink.setAttribute("media", "all");
+        }
+      });
+    </script>
+    <meta
+      name="Casa Otoño"
+      content="Bienvenidos a nuestra acogedora y dedicada residencia para adultos mayores. Ofrecemos un servicio integral y profesional, creando un modelo de atención que fomenta la convivencia en un ambiente familiar, ameno y seguro."
+    />
+    <title>Casa Otoño</title>
+  </head>
+  <body class="relative">
+    <slot />
+
+    <!-- Añadir el tracker Metricool aquí -->
+    <script>
+      function loadScript(a) {
+        var b = document.getElementsByTagName("head")[0],
+          c = document.createElement("script");
+        c.type = "text/javascript";
+        c.src = "https://tracker.metricool.com/resources/be.js";
+        c.onreadystatechange = a;
+        c.onload = a;
+        b.appendChild(c);
+      }
+      loadScript(function () {
+        beTracker.t({ hash: "588e6f6dc911982862e21f9fa04a4f0c" });
+      });
+    </script>
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-        margin: 0;
-        padding: 0;
-	
-	}
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
 </style>
